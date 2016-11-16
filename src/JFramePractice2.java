@@ -33,8 +33,15 @@ public class JFramePractice2 extends JFrame
     
     public JFramePractice2()
         {
-            super();
+            // going to JFrame constructor
+            super("Practice Using BorderLayout");
+            setSize(450, 450);
+            setVisible(true);
         }
-    
+
+    public static void main(String[] args)
+        {
+        
+        }// end main method
     
     }
