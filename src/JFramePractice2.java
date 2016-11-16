@@ -41,6 +41,7 @@ public class JFramePractice2 extends JFrame
 
     public static void main(String[] args)
         {
+            JFramePractice2 myFrame = new JFramePractice2();
         
         }// end main method
     
