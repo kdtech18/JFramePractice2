@@ -8,7 +8,10 @@
 import java.awt.Color;
 import java.awt.BorderLayout;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class JFramePractice2 extends JFrame
     {
@@ -27,5 +30,11 @@ public class JFramePractice2 extends JFrame
         JLabel centerLbl = new JLabel("CENTER");
         
         JButton pressMe = new JButton("Press me!");
+    
+    public JFramePractice2()
+        {
+            super();
+        }
+    
     
     }
