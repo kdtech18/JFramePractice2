@@ -81,7 +81,12 @@ public class JFramePractice2 extends JFrame implements ActionListener
 
     public void actionPerformed(ActionEvent e)
         {
+            Object source = e.getSource();
+            
+            if (source == pressMe)
             centerLbl.setText("You pressed the button!");
+            if (source == pressMe2)
+            centerLbl.setText("You pressed another button!");
         }
     public static void main(String[] args)
         {
