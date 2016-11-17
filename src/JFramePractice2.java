@@ -66,8 +66,8 @@ public class JFramePractice2 extends JFrame
             
             // center panel
             centerPnl.setBackground(Color.orange);
-            centerPnl.add(westLbl);
-            mainPnl.add(westPnl, BorderLayout.WEST);
+            centerPnl.add(centerLbl);
+            mainPnl.add(centerPnl, BorderLayout.CENTER);
             
         }
 
