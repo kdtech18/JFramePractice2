@@ -7,12 +7,14 @@
 
 import java.awt.Color;
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class JFramePractice2 extends JFrame
+public class JFramePractice2 extends JFrame implements ActionListener
     {
-        BorderLayout border = new BorderLayout(10, 10);
+        BorderLayout border = new BorderLayout(5, 5);
         
         JPanel mainPnl = new JPanel();
         
@@ -29,6 +31,7 @@ public class JFramePractice2 extends JFrame
         JLabel centerLbl = new JLabel("CENTER");
         
         JButton pressMe = new JButton("Press me!");
+        JButton pressMe2 = new JButton("No, Press me!");
     
     public JFramePractice2()
         {
@@ -46,12 +49,17 @@ public class JFramePractice2 extends JFrame
             // north
             northPnl.setBackground(Color.red);
             northPnl.add(northLbl);
+            northLbl.setForeground(Color.white);
             mainPnl.add(northPnl, BorderLayout.NORTH);
             repaint();
             
             // south panel
             southPnl.setBackground(Color.cyan);
-            southPnl.add(southLbl);
+            //southPnl.add(southLbl);
+            southPnl.add(pressMe);
+            southPnl.add(pressMe2);
+            pressMe.addActionListener(this);
+            pressMe2.addActionListener(this);
             mainPnl.add(southPnl, BorderLayout.SOUTH);
             
             // east panel
@@ -71,6 +79,10 @@ public class JFramePractice2 extends JFrame
             
         }
 
+    public void actionPerformed(ActionEvent e)
+        {
+            centerLbl.setText("You pressed the button!");
+        }
     public static void main(String[] args)
         {
             JFramePractice2 myFrame = new JFramePractice2();
